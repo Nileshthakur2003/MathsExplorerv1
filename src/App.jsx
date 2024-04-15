@@ -2,6 +2,15 @@ import { useState } from 'react'
 import './App.css'
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
 import {MathComponent} from './MathJaxComponents';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import About from './Pages/About';
+import linearAlgebra from './Pages/core/linearAlgebra';
+import multiCalc from './Pages/core/multicalc';
+import seqSeries from './Pages/core/seqseries';
+import statProb from './Pages/core/statprob';
+import HomeCode from './home';
+
+
 
 
 function App() {
@@ -9,19 +18,17 @@ function App() {
 
   return (
     <>
-    <div className='bg-gradient-to-bl  from-cyan-500 to-blue-500'>
-    <MEHeadingText />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<HomeCode/>}></Route>
+      <Route path='/about' element={<About/>}></Route>
+      <Route path='/linearAlgebra' element={<linearAlgebra/>}></Route>
+      <Route path='/multivariable-calc' element={<multiCalc/>}></Route>
+      <Route path='/sequence-series' element={<seqSeries/>}></Route>
+      <Route path='/stat-probablity' element={<statProb/>}></Route>
+    </Routes>
+    </BrowserRouter>
 
-    <SearchBox />
-    <div className='grid grid-col-* mx-5 mt-10'>
-      <MainCard content="Linear Algebra" url="https://images.pexels.com/photos/7794450/pexels-photo-7794450.jpeg?auto=compress&cs=tinysrgb&w=300" >
-        <ImageBox />
-      </MainCard>
-      <MainCard content="Multivariable Calculus"/>
-      <MainCard content="Sequences And Series"/>
-      <MainCard content="Statistics and Probablity"/>
-    </div>
-    </div>
     </>
   )
 }
