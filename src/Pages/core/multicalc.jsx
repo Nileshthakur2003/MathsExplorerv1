@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Outlet,Link } from "react-router-dom";
 
-const multiCalc = () =>{
+const MultiCalc = () =>{
 
     return(
         <>
@@ -19,4 +19,4 @@ const multiCalc = () =>{
     );
 }
 
-export default multiCalc;
+export default MultiCalc;

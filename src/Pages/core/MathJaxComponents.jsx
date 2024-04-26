@@ -19,5 +19,14 @@ export const XYWholeSquared = () => {
       );
 };
 
+// export const Matrix = (a,b,c,d) =>{
 
+//     return(
+//         <MathJaxContext>
+//             <MathJax>
+//            {"$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$"}
+//             </MathJax>
+//         </MathJaxContext>
+//     );
+// }
 

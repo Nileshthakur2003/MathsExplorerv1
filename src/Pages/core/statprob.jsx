@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Outlet,Link } from "react-router-dom";
 
-const statProb = () =>{
+const StatProb = () =>{
 
     return(
         <>
         <h1>
-            MathsExplorer &gt; Sequence And Series
+            MathsExplorer &gt; Statistics & Probablity
         </h1>
         <p className="text-xl m-10">
-        Sequence And Series contents here...
+        Statistics And Probablity contents here...
         </p>
         <button className='m-10'><Link to="/">Link to Dashboard</Link></button>
       
@@ -19,4 +19,4 @@ const statProb = () =>{
     );
 }
 
-export default statProb;
+export default StatProb;

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Outlet,Link } from "react-router-dom";
 
-const seqSeries = () =>{
+const SeqSeries = () =>{
 
     return(
         <>
@@ -19,4 +19,4 @@ const seqSeries = () =>{
     );
 }
 
-export default seqSeries;
+export default SeqSeries;

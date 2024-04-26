@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "nilesh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5"
+  },
+  "type": "module",
+  "devDependencies": {
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1"
+  }
+}

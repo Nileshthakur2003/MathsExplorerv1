@@ -1,20 +1,21 @@
 import { useState } from 'react'
 import './App.css'
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
-import {MathComponent} from './MathJaxComponents';
+import {MathComponent} from './Pages/core/MathJaxComponents';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import About from './Pages/About';
-import linearAlgebra from './Pages/core/linearAlgebra';
-import multiCalc from './Pages/core/multicalc';
-import seqSeries from './Pages/core/seqseries';
-import statProb from './Pages/core/statprob';
+import LinearAlgebra from './Pages/core/linearAlgebra';
+import LinearAlgebraSLE from './Pages/core/linearlib/sle';
+import MultiCalc from './Pages/core/multicalc';
+import SeqSeries from './Pages/core/seqseries';
+import StatProb from './Pages/core/statprob';
 import HomeCode from './home';
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -22,10 +23,11 @@ function App() {
     <Routes>
       <Route path='/' element={<HomeCode/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/linearAlgebra' element={<linearAlgebra/>}></Route>
-      <Route path='/multivariable-calc' element={<multiCalc/>}></Route>
-      <Route path='/sequence-series' element={<seqSeries/>}></Route>
-      <Route path='/stat-probablity' element={<statProb/>}></Route>
+      <Route path='/core/linearAlgebra' element={<LinearAlgebra/>}></Route>
+      <Route path='/core/multivariable-calc' element={<MultiCalc/>}></Route>
+      <Route path='/core/sequence-series' element={<SeqSeries/>}></Route>
+      <Route path='/core/stat-probablity' element={<StatProb/>}></Route>
+      <Route path='/core/linearAlgebra/sle' element={<LinearAlgebraSLE/>}></Route>
     </Routes>
     </BrowserRouter>
 
