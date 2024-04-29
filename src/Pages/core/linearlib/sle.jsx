@@ -1,29 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Outlet,Link } from "react-router-dom";
-import { XYWholeSquared } from "../MathJaxComponents";
+import { LinearEquationTwo,LinearEquationThree } from "./sleMathJax";
+
+import DropdownNav from '../dropdown';
+
 
 const activeTabColor = "purple";
 
+const optionListData = ["Text","Quiz","Books/Refs.","Further"];
 
 const LinearAlgebraSLE = () =>{
 
     return(
         <>
-        <h1>
+        <h1 className='sm:text-sm lg:text-2xl'>
            System of Linear Equations
         </h1>
-        <div className='flex flex-auto rounded-none divide-x m-10'>
-           <select className='px-5 py-1 rounded-lg'>
-            <option className=''>Concepts</option>
-            <option className=''>Tests</option>
-            <option className=''>Books/Refs</option>
-            <option className=''>Futher Reading</option>
-           </select>
+        <br />
+        <br/>
         
-        </div>
-        <div className='container-md'>
-            Linear Algebra texts
+
+        <DropdownNav optionList={optionListData}/>
+        <br/>
+        <div className='container-lg mt-10 justify-normal text-left'>
+        A system of linear equations (or linear system) is a collection of one or more linear equations involving the same variables
+        <LinearEquationThree x="9" y="8" z="9" constant="0"/>
         </div>
 
         </>
