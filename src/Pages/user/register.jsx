@@ -25,7 +25,7 @@ const RegisterPage = () =>{
 
             <input type='password' name='password' placeholder='password' className='p-5'/>
 
-            <button type='submit' className='rounded-none'>Login</button>
+            <button type='submit' className='rounded-none'>Register Account</button>
             </span>
 
             <p className='mt-5 '>
