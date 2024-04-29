@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import React from 'react';
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
 import {MathComponent} from './Pages/core/MathJaxComponents';
 import {BrowserRouter, Routes, Route} from "react-router-dom";

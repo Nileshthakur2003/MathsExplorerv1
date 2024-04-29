@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
 import './App.css'
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
 import {MathComponent} from './Pages/core/MathJaxComponents';
