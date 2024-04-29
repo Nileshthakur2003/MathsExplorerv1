@@ -27,9 +27,7 @@ const RegisterPage = () =>{
 
             <button type='submit' className='rounded-none'>Login</button>
             </span>
-            <p>
-            <a href='/register/' className='border border-l-blue-500 p-1'>Forgot Password?</a>
-            </p>
+
             <p className='mt-5 '>
                     Dont have an account,
                     <br></br><a href='/register/' >Register Here</a>
