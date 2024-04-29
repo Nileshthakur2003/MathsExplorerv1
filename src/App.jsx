@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import React from 'react';
-import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
-import {MathComponent} from './Pages/core/MathJaxComponents';
+// import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
+// import {MathComponent} from './Pages/core/MathJaxComponents';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import About from './Pages/About';
 import LinearAlgebra from './Pages/core/linearAlgebra';
