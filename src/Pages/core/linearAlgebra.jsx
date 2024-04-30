@@ -94,17 +94,20 @@ const LinearAlgebra = () =>{
 
     return(
         <>
+        <div className='flex flex-col mt-10'>
+        <i aria-flowto='left'>MathsExplorer &gt; LinearAlgebra</i>
         <h1>
-            MathsExplorer &gt; Linear Algebra
+            Linear Algebra
         </h1>
+        </div>
         <div className='flex mt-10 justify-between'>
-        <button>&lt; Back to Home</button>
+        <button><Link to="/">Back to Dashboard</Link></button>
             <div class="flex">
             <input onKeyDown={(e)=>updateTopics(e)} className="shadow appearance-none border rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" id="search-query" type="text" placeholder="Filter Contents..."/>
             </div>
         </div>
-        <p className="text-xl m-10 divide-x ">
-            <div className="grid grid-flow-row grid-cols-3 text-left">
+        <p className="text-xl m-10 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row">
            {
             topics.map((obj)=>(
                 <TopicLink text={obj.topic_name} id={obj.topic_id} url="./sle"/>
