@@ -11,7 +11,7 @@ const RegisterPage = () =>{
             <a href='/login/' className='border border-l-blue-600 rounded-none p-5'>Back</a>
         </h3>
         <div className='flex flex-col border  border-l-cyan-400 ' id='login'>
-            <div className='m-20'>
+            <div className='m-[4rem]'>
             <h1 className='text-base lg:text-4xl md:text-md flex flex-row'>
                      Register
             </h1>

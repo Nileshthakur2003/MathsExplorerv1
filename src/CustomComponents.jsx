@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export function MEHeadingText() {
 
     return (
-        <div className='mt-20 text-xl lg:text-4xl md:text-2xl sm:text-xl text-blue-500 subpixel-antialiased '>Mathematics Explorer<sup>v1.0</sup></div>
+        <div className='mt-20 text-2xl lg:text-6xl md:text-4xl sm:text-2xl text-blue-500 subpixel-antialiased '>Mathematics Explorer<sup>v1.0</sup></div>
     );
 };
 
