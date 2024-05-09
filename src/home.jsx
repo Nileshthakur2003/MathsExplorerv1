@@ -3,7 +3,7 @@ import React,{ useEffect, useState } from 'react'
 import './App.css'
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
 import axios from "axios";
-import cors from "cors";
+import Cookies from 'js-cookie';
 
 
 
@@ -13,13 +13,23 @@ let user = {};
 
 function HomeCode() {
   const [count, setCount] = useState(0)
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedUsername,setloggedUsername] = useState('')
+
 
 //const [loggedIn,setLogin] = useState(false)
-
+  useEffect(()=>{
+    if(Cookies.get('name')){
+      setLoggedIn(true);
+      setloggedUsername(Cookies.get('name'));
+    }
+  });
 console.log(url+'/checkIfLoggedIn')
 
 
-
+const clearLoggedIn = ()=>{
+  Cookies.set('name','',{ expires: -1 })
+}
 
 
   return (
@@ -29,13 +39,18 @@ console.log(url+'/checkIfLoggedIn')
     <MEHeadingText />
    
       <span className='flex flex-row p-10 justify-center'>
-        <a href='/login/' className='flex flex-row'>
+        {loggedIn?(
+          <div className='flex flex-row'>
+          <b>{loggedUsername}</b>
+          <a href='/' className='mx-4' onclick={clearLoggedIn()}>logout</a>
+          </div>
+        ):(<a href='/login/' className='flex flex-row'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
 </svg>
 
           Login / Register
-        </a>
+        </a>)}
       </span>
 
   
