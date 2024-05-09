@@ -11,6 +11,12 @@ const url = "http://localhost:3002";
 
 let user = {};
 
+
+function clearLoggedIn(){
+ // Cookies.set('name','',{ expires: -1 })
+}
+
+
 function HomeCode() {
   const [count, setCount] = useState(0)
   const [loggedIn, setLoggedIn] = useState(false)
@@ -41,8 +47,8 @@ const clearLoggedIn = ()=>{
       <span className='flex flex-row p-10 justify-center'>
         {loggedIn?(
           <div className='flex flex-row'>
-          <b>{loggedUsername}</b>
-          <a href='/' className='mx-4' onclick={clearLoggedIn()}>logout</a>
+          <b className='border border-1 p-2'>@{loggedUsername}</b>
+          <a href='/' className='mx-4 p-2 border border-1 border-indigo-500/100 hover:border-indigo-500/200' onClick={clearLoggedIn}>logout</a>
           </div>
         ):(<a href='/login/' className='flex flex-row'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
