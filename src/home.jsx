@@ -1,19 +1,33 @@
-import React,{ useState } from 'react'
+
+import React,{ useEffect, useState } from 'react'
 import './App.css'
 import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
-import {MathComponent} from './Pages/core/MathJaxComponents';
+import axios from "axios";
+import cors from "cors";
 
 
 
+const url = "http://localhost:3002";
+
+let user = {};
 
 function HomeCode() {
   const [count, setCount] = useState(0)
+
+//const [loggedIn,setLogin] = useState(false)
+
+console.log(url+'/checkIfLoggedIn')
+
+
+
+
 
   return (
     <>
 
     <div className='flex flex-col'>
     <MEHeadingText />
+   
       <span className='flex flex-row p-10 justify-center'>
         <a href='/login/' className='flex flex-row'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -23,6 +37,8 @@ function HomeCode() {
           Login / Register
         </a>
       </span>
+
+  
     <div className='flex flex-row m-10 justify-evenly sm:justify-between mb-10'>
       <a href='/grapher/' className='flex flex-row p-2 border border-solid border-gray-300 rounded-md'> 
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
