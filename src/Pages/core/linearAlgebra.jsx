@@ -103,7 +103,7 @@ const LinearAlgebra = () =>{
         <div className='flex flex-row mt-10 justify-between'>
         <button><Link to="/" className='flex-shrink'>&lt; Dashboard</Link></button>
             <div class="flex">
-            <input onKeyDown={(e)=>updateTopics(e)} className="shadow appearance-none border rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" id="search-query" type="text" placeholder="Filter Contents..."/>
+            <input onKeyDown={(e)=>updateTopics(e)} className="shadow appearance-none border rounded py-2 px-3 dark:text-white text-black leading-tight focus:outline-none focus:shadow-outline" id="search-query" type="text" placeholder="Filter Contents..."/>
             </div>
         </div>
         <p className="text-xl m-10 ">
