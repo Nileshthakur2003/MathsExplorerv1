@@ -29,3 +29,69 @@ export const XYWholeSquared = () => {
         </MathJaxContext>
       );
 };
+
+
+
+
+
+export const MatrixEquationExample = () => {
+    const equation = `
+    \\begin{bmatrix}
+    3 & 4 \\\\
+    5 & 2 
+    \\end{bmatrix}
+    \\begin{bmatrix}
+    x \\\\
+    y 
+    \\end{bmatrix}
+    =
+    \\begin{bmatrix}
+    12 \\\\
+    10 
+    \\end{bmatrix}
+    `;
+    return (
+        <MathJax.Context input='ascii'>
+            <div>
+                <MathJax.Node>{equation}</MathJax.Node>
+            </div>
+        </MathJax.Context>
+    );
+};
+
+
+
+export const MatrixEquation = () => {
+    const equation = `
+    \\begin{bmatrix}
+    3 & 4 \\\\
+    5 & 2 
+    \\end{bmatrix}
+    \\begin{bmatrix}
+    x \\\\
+    y 
+    \\end{bmatrix}
+    =
+    \\begin{bmatrix}
+    12 \\\\
+    10 
+    \\end{bmatrix}
+    `;
+    return (
+        <MathJax.Context input='ascii'>
+            <div>
+                <MathJax.Node>{equation}</MathJax.Node>
+            </div>
+        </MathJax.Context>
+    );
+};
+
+export const GeneralMatrixForm = () => {
+    const equation = `A \\mathbf{x} = \\mathbf{b}`;
+    return (
+        <MathJax.Context input='ascii'>
+            <div>
+                <MathJax.Node>{equation}</MathJax.Node>
+            </div>
+        </MathJax.Context>
+    )}

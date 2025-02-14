@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
 import React from 'react';
 // import {ImageBox, MEHeadingText, MainCard, SearchBox } from './CustomComponents'
 // import {MathComponent} from './Pages/core/MathJaxComponents';
@@ -15,7 +14,10 @@ import Grapher from './Pages/grapher/grapher';
 import LoginPage from './Pages/user/login';
 import RegisterPage from './Pages/user/register';
 import ForgotPasswordPage from './Pages/user/ForgotPassword';
-
+import Core from './Pages/core/core';
+import './App.css';
+import TopNav from './components/TopNavBar';
+import Contributions from './Pages/core/contributions';
 
 
 function App() {
@@ -27,10 +29,12 @@ function App() {
     <Routes>
       <Route path='/' element={<HomeCode/>}></Route>
       <Route path='/about' element={<About/>}></Route>
+      <Route path='/core' element={<Core/>}></Route>
+      <Route path='/contributions/' element={<Contributions/>}></Route>
       <Route path='/core/linearAlgebra' element={<LinearAlgebra/>}></Route>
-      <Route path='/core/multivariable-calc' element={<MultiCalc/>}></Route>
-      <Route path='/core/sequence-series' element={<SeqSeries/>}></Route>
-      <Route path='/core/stat-probablity' element={<StatProb/>}></Route>
+      <Route path='/core/multivariableCalc' element={<MultiCalc/>}></Route>
+      <Route path='/core/sequenceSeries' element={<SeqSeries/>}></Route>
+      <Route path='/core/statProbablity' element={<StatProb/>}></Route>
       <Route path='/core/linearAlgebra/sle' element={<LinearAlgebraSLE/>}></Route>
       <Route path='/grapher/' element={<Grapher/>}></Route>
       <Route path='/login/' element={<LoginPage/>}></Route>

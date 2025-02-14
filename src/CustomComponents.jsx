@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 import React from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
@@ -10,16 +11,24 @@ export function MEHeadingText() {
 };
 
 
-export function SearchBox(){
-
-
-    return(
-        <div className='flex flex-1 mt-15'>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" id="search-query" type="text" placeholder="Search Concepts"/>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Search</button>
-        </div>
-    );
+export function SearchBox() {
+  return (
+    <div className="flex flex-1 mt-[15px] mx-10">
+      <div className="relative w-full">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+        <input
+          className="shadow appearance-none border rounded w-full pl-10 pr-3 py-2 text-white bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+          id="search-query"
+          type="text"
+          placeholder="Search Concepts"
+          aria-label="Search Concepts"
+        />
+      </div>
+    </div>
+  );
 }
+
+  
 
 export function MainCard(props){
 
