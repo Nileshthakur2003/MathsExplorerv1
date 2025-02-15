@@ -22,23 +22,9 @@ const HomeCode = () => {
         <div className='flex flex-col'>
             <MEHeadingText />
 
-            {/* Login/Logout Section */}
+            
             <span className='flex flex-row p-10 justify-center'>
-                {loggedIn ? (
-                    <div className='flex flex-row'>
-                        <b className='border border-1 p-2'>@{loggedUsername}</b>
-                        <a href='/' className='mx-4 p-2 border border-1 border-indigo-500/100 hover:border-indigo-500/200' onClick={clearLoggedIn}>
-                            logout
-                        </a>
-                    </div>
-                ) : (
-                    <a href='/login/' className='flex flex-row'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                        </svg>
-                        Login / Register
-                    </a>
-                )}
+                <i>A guide to Engineering Mathematics</i>
             </span>
 
             {/* Search Box */}
