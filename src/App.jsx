@@ -11,8 +11,6 @@ import SeqSeries from './Pages/core/seqseries';
 import StatProb from './Pages/core/statprob';
 import HomeCode from './home';
 import Grapher from './Pages/grapher/grapher';
-import LoginPage from './Pages/user/login';
-import RegisterPage from './Pages/user/register';
 import ForgotPasswordPage from './Pages/user/ForgotPassword';
 import Core from './Pages/core/core';
 import './App.css';
