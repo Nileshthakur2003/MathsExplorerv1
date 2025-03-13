@@ -25,14 +25,16 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /*place-items: center;*/
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
+  margin: 0.5em;
 }
 
 button {
@@ -64,5 +66,34 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .read-the-docs {
+    text-align: left;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }

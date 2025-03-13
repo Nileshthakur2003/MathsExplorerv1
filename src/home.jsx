@@ -26,7 +26,7 @@ const HomeCode = () => {
             <span className='flex flex-row p-10 justify-center'>
                 <i>A guide to Engineering Mathematics</i>
             </span>
-
+        
             {/* Search Box */}
             <SearchBox id="query" />
 
