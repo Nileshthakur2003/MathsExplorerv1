@@ -8,11 +8,7 @@ import SeqSeries from './Pages/core/seqseries';
 import StatProb from './Pages/core/statprob';
 import HomeCode from './home';
 import Grapher from './Pages/grapher/grapher';
-import LoginPage from './Pages/user/login';
-import RegisterPage from './Pages/user/register';
-import ForgotPasswordPage from './Pages/user/ForgotPassword';
 import Core from './Pages/core/core';
-import TopNav from './components/TopNavBar';
 import Contributions from './Pages/core/contributions';
 import SLELinksAndReferences from './Pages/core/linearlib/sleComponents/BooksAndRefs';
 import './App.css';
@@ -33,9 +29,6 @@ function App() {
           <Route path='/core/statProbablity' element={<StatProb/>}></Route>
           <Route path='/core/linearAlgebra/sle' element={<LinearAlgebraSLE/>}></Route>
           <Route path='/grapher/' element={<Grapher/>}></Route>
-          <Route path='/login/' element={<LoginPage/>}></Route>
-          <Route path='/register/' element={<RegisterPage/>}></Route>
-          <Route path='/recoverAccount/' element={<ForgotPasswordPage/>}></Route>
           <Route path='/core/linearAlgebra/sle' element={<LinearAlgebraSLE/>}></Route>
           <Route path='/core/linearAlgebra/sle/booksrefs' element={<SLELinksAndReferences/>}></Route>
         </Routes>
